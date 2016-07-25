@@ -31,3 +31,9 @@ done
 echo "Execute script build succeed."
 echo "Enter server nodes to finish"
 cat > $target/nodes
+
+if ! which expect >> /dev/null; then
+    echo "Install expect..."
+    sudo apt-get install expect -y
+fi
+
